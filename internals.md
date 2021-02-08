@@ -30,7 +30,7 @@ know and keep in mind:
 
  - `result` is the usual name we use for a `CURLcode` variable to hold the
    return values from functions and if that return value is different than
-   zero, it is an error and the function should clean up and return back
+   zero, it is an error and the function should clean up and return
    (usually passing on the same error code to its parent function).
 
 ## Everything is multi
@@ -71,7 +71,7 @@ state machine.
 
 libcurl is a multi-protocol transfer library. The core of the code is a set of
 generic functions that are used for transfers in general and will mostly work
-the same for all protocols. The main state machine descibed above for example
+the same for all protocols. The main state machine described above for example
 is there and works for all protocols - even though some protocols may not make
 use of all states for all transfers.
 
@@ -92,7 +92,7 @@ to the handler struct for the protocol that handles this URL.
 The handler struct contains a set of function pointers that can be NULL or set
 to point to a protocol specific function to do things necessary for that
 protocol to work for a transfer. Things that not all other protocols need. The
-handler struct also sets up the name of the protocol and decribes its feature
+handler struct also sets up the name of the protocol and describes its feature
 set with a bitmask.
 
 A libcurl transfer is built around a set of different "actions" and the
@@ -134,11 +134,3 @@ When a transfer is completed, the "done" action is taken:
 The connection is about to be taken down.
 
     result = conn->handler->disconnect(conn, dead_connection);
-
-## Name resolving
-
-TBD
-
-## vtls
-
-TBD

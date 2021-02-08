@@ -1,3 +1,5 @@
+%{json}
+--alt-svc
 --anyauth
 --basic
 --compressed
@@ -12,6 +14,10 @@
 --ftp-skip-pasv-ip
 --get
 --header
+--http1.1
+--http2
+--http2-prior-knowledge
+--http3
 --keepalive-time
 --libcurl
 --limit-rate
@@ -26,6 +32,8 @@
 --no-eprt
 --no-epsv
 --ntlm
+--parallel
+--parallel-max
 --post301
 --post302
 --post303
@@ -48,27 +56,89 @@
 --trace-ascii
 --trace-time
 --verbose
+--version
 --write-out
+-b
+-c
+-d
 -F
 -K
 -L
 -O
 -T
 -U
--X
--b
--c
--d
 -u
+-X
 -x
+-Z
 .netrc
 /etc/hosts
 <curl/curl.h>
 ALPN
+apt
+Arch Linux
+BearSSL
 BoringSSL
+bugreports
+c-ares
 C89
 CA
+Chrome
+clone
+code of conduct
+configure
+connection cache
+connection pool
+Connection reuse
+content-encoding
+contribute
+Contributing
+Cookie engine
+Cookies
+copyright
+curl-announce
+curl-library
+curl-users
+curl_easy_cleanup
+curl_easy_getinfo
+curl_easy_init
+curl_easy_perform
+curl_easy_reset
+curl_easy_setopt
+curl_global_cleanup
+curl_global_init
+CURL_IPRESOLVE_V6
+CURL_MAX_WRITE_SIZE
+curl_mime_addpart
+curl_mime_filedata
+curl_mime_init
+curl_mime_name
+curl_multi_add_handle
+curl_multi_cleanup
+curl_multi_fdset
+curl_multi_info_read
+curl_multi_init
+curl_multi_remove_handle
+curl_multi_remove_handle
+curl_multi_setopt
+curl_multi_socket_action
+curl_multi_timeout
+curl_multi_wait
+curl_off_t
+CURL_SOCKET_TIMEOUT
+CURL_SSL_BACKEND
+curl_url
+curl_url_cleanup
+curl_url_dup
+curl_url_get
+curl_url_set
+curl_version_info
 CURLE_ABORTED_BY_CALLBACK
+CURLINFO_CERTINFO
+CURLINFO_CONTENT_TYPE
+CURLINFO_EFFECTIVE_URL
+CURLINFO_FILETIME
+CURLINFO_TOTAL_TIME_T
 CURLMOPT_SOCKETFUNCTION
 CURLMOPT_TIMERFUNCTION
 CURLOPT_CLOSEOCKETFUNCTION
@@ -97,6 +167,7 @@ CURLOPT_HTTPPOST
 CURLOPT_IPRESOLVE
 CURLOPT_MAXFILE_LARGE
 CURLOPT_MAXREDIRS
+CURLOPT_MIMEPOST
 CURLOPT_NOBODY
 CURLOPT_NOPROGRESS
 CURLOPT_OPENSOCKETDATA
@@ -117,9 +188,9 @@ CURLOPT_SEEKFUNCTION
 CURLOPT_SOCKOPTDATA
 CURLOPT_SOCKOPTFUNCTION
 CURLOPT_SSH_KNOWNHOSTS
-CURLOPT_SSLVERSION
 CURLOPT_SSL_VERIFYHOST
 CURLOPT_SSL_VERIFYPEER
+CURLOPT_SSLVERSION
 CURLOPT_STDERR
 CURLOPT_TCP_KEEPALIVE
 CURLOPT_TIMEOUT
@@ -139,115 +210,38 @@ CURLUPART_PATH
 CURLUPART_PORT
 CURLUPART_QUERY
 CURLUPART_USER
-CURL_IPRESOLVE_V6
-CURL_MAX_WRITE_SIZE
-CURL_SOCKET_TIMEOUT
-Chrome
-Connection reuse
-Contributing
-Cookie engine
-Cookies
-Debug callback
-Firefox
-Fragment
-Globbing
-GnuTLS
-Gopher
-HTTP ranges
-HTTP redirects
-HTTP/1.1
-HTTP/2
-Header callback
-Host:
-HttpGet
-IDN
-IPv4
-IPv6
-Indentation
-JavaScript
-KNOWN_BUGS
-MIT
-MITM-proxies
-MesaLink
-Metalink
-NPN
-NSS
-OpenSSL
-PAC
-Percent-encoding
-Progress callback
-RELEASE-NOTES
-RTMP
-RTSP
-Read callback
-SCP
-SFTP
-SMTP
-SMTPS
-SNI
-SSH
-SSL context callback
-SSLKEYLOGFILE
-STARTTLS
-Safari
-Schannel
-Scheme
-TELNET
-TLS
-TODO
-URL Globbing
-Vulnerability
-Wireshark
-Write callback
-apt
-bugreports
-c-ares
-clone
-code of conduct
-configure
-connection cache
-connection pool
-content-encoding
-contribute
-copyright
-curl-announce
-curl-library
-curl-users
-curl_easy_cleanup
-curl_easy_init
-curl_easy_perform
-curl_easy_reset
-curl_easy_setopt
-curl_global_cleanup
-curl_global_init
-curl_multi_add_handle
-curl_multi_cleanup
-curl_multi_fdset
-curl_multi_info_read
-curl_multi_init
-curl_multi_remove_handle
-curl_multi_remove_handle
-curl_multi_setopt
-curl_multi_socket_action
-curl_multi_timeout
-curl_multi_wait
-curl_off_t
-curl_url
-curl_url_cleanup
-curl_url_dup
-curl_url_get
-curl_url_set
-curl_version_info
 debian
+Debug callback
 development
 environment variables
 etiquette
 event-driven
+Firefox
+Fragment
 future
 git
+Globbing
+GnuTLS
+GOPHER
+GOPHERS
+Header callback
 homebrew
+Host:
+HTTP ranges
+HTTP redirects
+HTTP/1.1
+HTTP/2
+HTTP/3
+HTTP/3 backend
+HttpGet
+IDN
+Indentation
+IPv4
+IPv6
+JavaScript
 json
 keep-alive
+KNOWN_BUGS
 libcurl version
 libidn2
 libmetalink
@@ -256,24 +250,85 @@ libressl
 librtmp
 libssh2
 license
+MesaLink
+Metalink
+MIT
+MITM-proxies
+MQTT
 multi-threading
 name resolving
 nghttp2
 nix
+NPN
+NSS
 openldap
+OpenSSL
+PAC
+Percent-encoding
 pop3
 port number
+Progress callback
 pronunciation
 proxy
 ranges
+Read callback
 redhat
 redirects
+RELEASE-NOTES
 releases
 repository
+RFC 1436
+RFC 1738
+RFC 1939
+RFC 1945
+RFC 2229
+RFC 2246
+RFC 2326
+RFC 2595
+RFC 2818
+RFC 3207
+RFC 3501
+RFC 3986
+RFC 4217
+RFC 4511
+RFC 5321
+RFC 7230
+RFC 7540
+RFC 7838
+RFC 8314
+RFC 8446
+RFC 854
+RFC 959
 roadmap
+RTMP
+RTSP
+Safari
+Schannel
+Scheme
+SCP
 security
+SFTP
+SMTP
+SMTPS
 snapshots
+SNI
+SSH
+SSH backend
+SSL context callback
+SSLKEYLOGFILE
+STARTTLS
+TELNET
 testing
+TLS
+TLS backend
+TODO
 transfer-encoding
+Ubuntu
+URL Globbing
+Vulnerability
+Wireshark
+wolfSSH
+wolfSSL
+Write callback
 yum
 zlib
